@@ -1,15 +1,6 @@
 *** Settings ***
 
 *** Variables ***
-#Home page locators
-${SignInButton}  //a[@class="login"]
-
-#my-account page locators
-${EmailAddressForm}  //*[@id="email_create"]
-${EmailAddressSubmitButton}  //*[@id="SubmitCreate"]
-${EmailAddressSignInForm}   //*[@id="email"]
-${PasswordSignInForm}   //*[@id="passwd"]
-${SubmitSignInButton}    //*[@id="SubmitLogin"]
 
 #account-creation page locators
 ${PersonalInformationTitleButton}   //*[@id="id_gender1"]

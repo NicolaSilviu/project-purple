@@ -12,5 +12,5 @@ Test Teardown    General.Close Browser
 AUTH-001 Sign in
     [Documentation]  This test signs in the user
     [Tags]  Suite1
-    Go to website
-    Sign in
+    General.Go to website
+    Authentication.Sign in

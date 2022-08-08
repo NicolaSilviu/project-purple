@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 Library    String
 
 Resource    ../general/General.robot
-Resource    AuthenticationLocators.robot
+Resource    ./AuthenticationLocators.robot
 
 
 *** Keywords ***

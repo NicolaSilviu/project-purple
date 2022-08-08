@@ -5,6 +5,7 @@ Library    SeleniumLibrary
 Resource    ../../resources/general/General.robot
 Resource    ../../resources/create-account/CreateAccount.robot
 
+Test Setup    General.Go to website
 Test Teardown    General.Close Browser
 
 
@@ -16,8 +17,7 @@ CREA-001 Verify Create An Account page components
 CREA-002 Verify Create An Account page allows user to complete data and create account
     [Documentation]    Verify Create An Account page allows user to complete data and create account
     [Tags]  Suite1
-    Go to website
-    Create account
+    CreateAccount.Create account
 
 
 

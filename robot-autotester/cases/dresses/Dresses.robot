@@ -4,37 +4,38 @@ Library    SeleniumLibrary
 
 Resource    ../../resources/general/General.robot
 Resource    ../../resources/dresses/Dresses.robot
+Resource    ../../resources/authentication/Authentication.robot
 
+Test Setup    General.Go to website
 Test Teardown    General.Close Browser
 
 
 *** Test Cases ***
-Place Order
+DRES-001 Place Order
     [Tags]  Suite1
+    Log    Step 0: Sign in
+    Authentication.Sign in
+        
+    Log    Step 1: Go to summer dresses page 
+    Dresses.Go to summer dresses page
+
+    Log    Step 2: Add 2 items from option2 to cart
+    General.Go to option details    2
+    General.Add item from option to cart    White    M
+    General.Add item from option to cart    Yellow    M
+
+    Log    Step 3: Go to summer dresses page 
     Go to summer dresses page
 
-Add items from option2 to cart
-    [Tags]  Suite1
-    Go to option2 details
-    Add item1 from option2 to cart
-    Add item2 from option2 to cart
+    Log    Step 4: Add 2 items from option3 to cart
+    General.Go to option details    3
+    General.Add item from option to cart    White    L
+    General.Add item from option to cart    Yellow    L
 
-Go to summer dresses 2
-    [Tags]  Suite1
-    Go to summer dresses page
+    Log    Step 5: Check cart total
+    General.Go to cart
+    General.Check total price
 
-Add items from option3 to cart
-    [Tags]  Suite1
-    Go to option3 details
-    Add item1 from option3 to cart
-    Add item2 from option3 to cart
-
-Check cart total
-    [Tags]  Suite1
-    Go to cart
-    Check total price
-
-Place order
-    [Tags]  Suite1
-    Go to cart
-    Finish checkout
+    Log    Step 6: Place order
+    General.Go to cart
+    General.Finish checkout
