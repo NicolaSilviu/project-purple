@@ -1,3 +1,4 @@
+#Variables
 url = "http://automationpractice.com/index.php"
 browser = "chrome"
 EmailAddress = "test-email11911@this.com"
@@ -10,4 +11,5 @@ PostalCode = "21201"
 PhoneNumber = "+381 11 8701078"
 DressQuantity = "1"
 DressBudget = "100"
-color_options = {'8', '15', '16'}
+color_string_list = ["White", "Green", "Yellow"]
+color_number_list = ['8', '15', '16']

@@ -27,7 +27,12 @@ Select the size
 Select the color 
     [Arguments]    ${color}
 
-    IF    ${color} not in ${color_options}    Fail    Color not available! 
+    IF    ${color} not in ${color_string_list}    Fail    Color not available! Available colors are White, Green and Yellow. 
+
+    FOR    ${color_string}    ${color_number}    IN ZIP    ${color_string_list}    ${color_number_list}
+        ${color}    Set Variable If    ${color} == ${color_string}    ${color_number}    
+    END
+
     ${SelectColour_option_button}    String.Replace String    ${SelectColour_option_button}    index    ${color}       
     Click Element   ${SelectColour_option_button}
 

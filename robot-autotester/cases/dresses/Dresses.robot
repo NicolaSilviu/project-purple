@@ -9,7 +9,7 @@ Test Teardown    General.Close Browser
 
 
 *** Test Cases ***
-Go to summer dresses 1
+Place Order
     [Tags]  Suite1
     Go to summer dresses page
 
