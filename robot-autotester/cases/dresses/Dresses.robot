@@ -5,6 +5,8 @@ Library    SeleniumLibrary
 Resource    ../../resources/general/General.robot
 Resource    ../../resources/dresses/Dresses.robot
 
+Test Teardown    General.Close Browser
+
 
 *** Test Cases ***
 Go to summer dresses 1
@@ -36,4 +38,3 @@ Place order
     [Tags]  Suite1
     Go to cart
     Finish checkout
-    Finish TestCase

@@ -10,3 +10,4 @@ PostalCode = "21201"
 PhoneNumber = "+381 11 8701078"
 DressQuantity = "1"
 DressBudget = "100"
+color_options = {'8', '15', '16'}

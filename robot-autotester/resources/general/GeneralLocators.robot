@@ -35,21 +35,16 @@ ${PersonalInformation_Register_Button}   //*[@id="submitAccount"]
 #my-account page locators
 ${Dresses_hover}   //*[@id="block_top_menu"]/ul/li[2]/a
 ${SummerDresses_button}   //*[@id="block_top_menu"]/ul/li[2]/ul/li[3]/a
-${Dress2_Image_hover}   //*[@id="center_column"]/ul/li[2]/div/div[1]/div
-${Dress2_More_button}   //*[@id="center_column"]/ul/li[2]/div/div[2]/div[2]/a[2]
-${Dress3_Image_hover}   //*[@id="center_column"]/ul/li[3]/div/div[1]/div
-${Dress3_More_button}   //*[@id="center_column"]/ul/li[3]/div/div[2]/div[2]/a[2]
+${Dress_Image_hover}   //*[@id="center_column"]/ul/li[2]/div/div[index]/div
+${Dress_More_button}   //*[@id="center_column"]/ul/li[2]/div/div[index]/div[2]/a[2]
 ${Cart_button}   //*[@id="header"]/div[3]/div/div/div[3]/div/a
 
 #Item details page locators
 ${Quantity_form}    //*[@id="quantity_wanted"]
 ${SelectSize_drop}   //*[@id="group_1"]
-${SelectSize_S_button}   //*[@id="group_1"]/option[1]
-${SelectSize_M_button}   //*[@id="group_1"]/option[2]
-${SelectSize_L_button}   //*[@id="group_1"]/option[3]
-${SelectColour_White_button}   //*[@id="color_8"]
-${SelectColour_Green_button}   //*[@id="color_15"]
-${SelectColour_Yellow_button}   //*[@id="color_16"]
+${SelectSize_option_button}   //*[@id="group_1"]/option['index']
+${SelectColour_option_button}   //*[@id="color_'index'"]
+
 ${AddToCart_button}   //*[@id="add_to_cart"]/button
 ${ContinueShopping_button}   //*[@id="layer_cart"]/div[1]/div[2]/div[4]/span
 
