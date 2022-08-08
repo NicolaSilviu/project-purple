@@ -73,24 +73,13 @@ Check total price
 
 
 Finish checkout
-#Summary page
-    Wait Until Page Contains Element   ${Summary_ProceedToCheckout_button}
-    Click Element   ${Summary_ProceedToCheckout_button}
-#Address page
-    Wait Until Page Contains Element    ${Address_ProceedToCheckout_button}
-    Click Element   ${Address_ProceedToCheckout_button}
-#Shipping page
-    Wait Until Page Contains Element   ${Shipping_TermsOfService_button}
-    Click Element   ${Shipping_TermsOfService_button}
-    Wait Until Page Contains Element   ${Shipping_ProceedToCheckout_button}
-    Click Element   ${Shipping_ProceedToCheckout_button}
-#Select payment method
-    Wait Until Page Contains Element   ${Payment_BankWire_button}
-    Click Element   ${Payment_BankWire_button}
-    Wait Until Page Contains Element   ${Payment_ConfirmOrder_button}
-    Click Element   ${Payment_ConfirmOrder_button}
+    FOR    ${element}    IN    ${Summary_ProceedToCheckout_button}    ${Address_ProceedToCheckout_button}    
+        ...    ${Shipping_TermsOfService_button}    ${Shipping_ProceedToCheckout_button}    ${Payment_BankWire_button}    
+        ...    ${Payment_ConfirmOrder_button}
+        Wait Until Page Contains Element   ${element}
+        Click Element   ${element}
+    END
+
 
 Reload the page
     Reload Page
-
-
