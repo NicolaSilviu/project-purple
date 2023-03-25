@@ -16,7 +16,7 @@ CREA-001 Verify Create An Account page components
 
 CREA-002 Verify Create An Account page allows user to complete data and create account
     [Documentation]    Verify Create An Account page allows user to complete data and create account
-    [Tags]  Suite1
+    [Tags]  Functional
     CreateAccount.Create account
 
 

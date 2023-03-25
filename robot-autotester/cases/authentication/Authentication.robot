@@ -11,6 +11,6 @@ Test Teardown    General.Close Browser
 *** Test Cases ***
 AUTH-001 Sign in
     [Documentation]  This test signs in the user
-    [Tags]  Suite1
+    [Tags]  Functional    Authentication
     General.Go to website
     Authentication.Sign in

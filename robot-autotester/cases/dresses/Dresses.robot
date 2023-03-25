@@ -5,6 +5,7 @@ Library    SeleniumLibrary
 Resource    ../../resources/general/General.robot
 Resource    ../../resources/dresses/Dresses.robot
 Resource    ../../resources/authentication/Authentication.robot
+Resource    ../../resources/cart/Cart.robot
 
 Test Setup    General.Go to website
 Test Teardown    General.Close Browser
@@ -12,7 +13,7 @@ Test Teardown    General.Close Browser
 
 *** Test Cases ***
 DRES-001 Place Order
-    [Tags]  Suite1
+    [Tags]  Functional
     Log    Step 0: Sign in
     Authentication.Sign in
         
@@ -33,9 +34,9 @@ DRES-001 Place Order
     General.Add item from option to cart    Yellow    L
 
     Log    Step 5: Check cart total
-    General.Go to cart
+    Cart.Go to cart
     General.Check total price
 
     Log    Step 6: Place order
-    General.Go to cart
+    Cart.Go to cart
     General.Finish checkout

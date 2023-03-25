@@ -10,10 +10,20 @@ Go to website
     Open Browser  ${url}  ${browser}
     Maximize Browser Window
 
-
 Close Browser
     Sleep    1s
     Close Browser
+
+Click On Element
+    [Arguments]   ${element}
+    Wait Until Element Is Visible   ${element}
+    Click Element   ${element}
+
+Hover On Element
+    [Arguments]   ${element}
+    Wait Until Element Is Visible   ${element}
+    Mouse Over   ${element}
+    Sleep    1s
 
 
 Select the size
@@ -60,16 +70,11 @@ Add item from option to cart
     Sleep   5s
     Click Element   ${ContinueShopping_button}
 
-
-Go to cart
-    Click Element   ${Cart_button}
-
-
 Check total price
-    ${Price_text}   GET TEXT   xpath=${TotalPrice_text}
-    ${price}=    Remove String        ${Price_text}   $
-    ${price}=    Convert To Number    ${price}
-    SHOULD BE TRUE   ${price} < ${DressBudget}
+    ${Price_text}   GET TEXT    ${TotalPrice_text}
+    ${price}    Remove String   ${Price_text}   $
+    ${price}    Convert To Number    ${price}
+    Should Be True   ${price} < ${DressBudget}
 
 
 Finish checkout
@@ -77,9 +82,9 @@ Finish checkout
         ...    ${Shipping_TermsOfService_button}    ${Shipping_ProceedToCheckout_button}    ${Payment_BankWire_button}    
         ...    ${Payment_ConfirmOrder_button}
         Wait Until Page Contains Element   ${element}
-        Click Element   ${element}
+        Click On Element   ${element}
     END
-
 
 Reload the page
     Reload Page
+    

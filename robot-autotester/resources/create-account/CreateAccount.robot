@@ -20,14 +20,16 @@ Create account
     Press Keys   ${PersonalInformationFirstNameForm}   ${FirstName}
     Press Keys   ${PersonalInformationLastNameForm}   ${LastName}
     Press Keys   ${PersonalInformationPasswordForm}   ${Password}
-    Click Element   ${PersonalInformationDaysDrop}
-    Click Element   ${PersonalInformationDaysOption}
-    Click Element   ${PersonalInformationMonthsDrop}
-    Click Element   ${PersonalInformationMonthsOption}
-    Click Element   ${PersonalInformationYearsDrop}
-    Click Element   ${PersonalInformationYearsOption}
-    Click Element   ${PersonalInformationNewsletterButton}
-    Click Element   ${PersonalInformationOffersButton}
+  
+    @{elements_list}    Create List    ${PersonalInformationDaysDrop}
+    ...   ${PersonalInformationDaysOption}   ${PersonalInformationMonthsDrop}
+    ...   ${PersonalInformationMonthsOption}   ${PersonalInformationYearsDrop}
+    ...   ${PersonalInformationYearsOption}   ${PersonalInformationNewsletterButton}
+    ...   ${PersonalInformationOffersButton}
+    FOR   ${element}   IN    @{elements_list}
+        Click Element   ${element} 
+    END
+
     Press Keys   ${PersonalInformationAddressForm}   ${UserAddress}
     Press Keys   ${PersonalInformationCityForm}   ${City}
     Click Element   ${PersonalInformation_State_Drop}

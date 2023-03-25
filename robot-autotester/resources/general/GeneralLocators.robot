@@ -24,11 +24,9 @@ ${PersonalInformation_Phone_Form}   //*[@id="phone_mobile"]
 ${PersonalInformation_Register_Button}   //*[@id="submitAccount"]
 
 #my-account page locators
-${Dresses_hover}   //*[@id="block_top_menu"]/ul/li[2]/a
-${SummerDresses_button}   //*[@id="block_top_menu"]/ul/li[2]/ul/li[3]/a
 ${Dress_Image_hover}   //*[@id="center_column"]/ul/li[2]/div/div[index]/div
 ${Dress_More_button}   //*[@id="center_column"]/ul/li[2]/div/div[index]/div[2]/a[2]
-${Cart_button}   //*[@id="header"]/div[3]/div/div/div[3]/div/a
+
 
 #Item details page locators
 ${Quantity_form}    //*[@id="quantity_wanted"]
