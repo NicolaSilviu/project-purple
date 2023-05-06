@@ -1,5 +1,5 @@
 #Variables
-url = "http://automationpractice.com/index.php"
+url = "http://localhost/wordpress/"
 browser = "chrome"
 EmailAddress = "test-email11911@this.com"
 FirstName = "Andrei"
