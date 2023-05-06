@@ -5,20 +5,20 @@ Library    SeleniumLibrary
 Resource    ../../resources/general/General.robot
 Resource    ../../resources/cart/Cart.robot
 
-Test Teardown    General.Close Browser
+Test Teardown    General.Stop Test
 
 
 *** Test Cases ***
 [CART-001] Cart can be accessed 
     [Documentation]  This test signs in the user
     [Tags]  Functional    Cart
-    General.Go to website
+    General.Start Test
     General.Click On Element    ${Cart_button}
 
 [CART-002] Cart elements are displayed
     [Documentation]  This test signs in the user
     [Tags]  Functional    Cart
-    General.Go to website
+    General.Start Test
     General.Click On Element    ${Cart_button}
     FOR    ${element}    IN    ${Summary_ProceedToCheckout_button}    ${Address_ProceedToCheckout_button}    
         ...    ${Shipping_TermsOfService_button}    ${Shipping_ProceedToCheckout_button}    ${Payment_BankWire_button}    
@@ -29,7 +29,7 @@ Test Teardown    General.Close Browser
 [CART-003] Validate Cart is empty when user visits website 
     [Documentation]  This test signs in the user
     [Tags]  Functional    Cart
-    General.Go to website
+    General.Start Test
     ${cart_text}   Get Text    ${Cart_button}
     Should Contain    ${cart_text}   Empty
     General.Click On Element    ${Cart_button}

@@ -6,13 +6,13 @@ Resource    GeneralLocators.robot
 
 
 *** Keywords ***
-Go to website
+Start Test
     Open Browser  ${url}  ${browser}
     Maximize Browser Window
 
-Close Browser
-    Sleep    1s
-    Close Browser
+Stop Test
+    Sleep  1s
+    SeleniumLibrary.Close All Browsers
 
 Click On Element
     [Arguments]   ${element}

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on win32)" generated="20230506 14:09:18.288" rpa="false" schemaversion="3">
+<suite id="s1" name="Cases" source="D:\project-purple\robot-autotester\cases">
+<suite id="s1-s1" name="Shop" source="D:\project-purple\robot-autotester\cases\shop">
+<suite id="s1-s1-s1" name="Shop" source="D:\project-purple\robot-autotester\cases\shop\Shop.robot">
+<test id="s1-s1-s1-t1" name="[SHOP-001] Shop page is working" line="13">
+<kw name="Log" library="BuiltIn">
+<arg>Step 1 Start Test</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230506 14:09:18.524" level="INFO">Step 1 Start Test</msg>
+<status status="PASS" starttime="20230506 14:09:18.524" endtime="20230506 14:09:18.524"/>
+</kw>
+<kw name="Start Test" library="General">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230506 14:09:18.525" level="INFO">Opening browser 'chrome' to base url 'http://localhost/wordpress/'.</msg>
+<status status="PASS" starttime="20230506 14:09:18.525" endtime="20230506 14:09:21.785"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230506 14:09:21.785" endtime="20230506 14:09:21.897"/>
+</kw>
+<status status="PASS" starttime="20230506 14:09:18.524" endtime="20230506 14:09:21.897"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Step 2 Go to Shop page</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230506 14:09:21.897" level="INFO">Step 2 Go to Shop page</msg>
+<status status="PASS" starttime="20230506 14:09:21.897" endtime="20230506 14:09:21.897"/>
+</kw>
+<kw name="Verify Home page is loaded" library="Home">
+<for flavor="IN">
+<var>${element}</var>
+<value>${home_btn}</value>
+<value>${my_account_btn}</value>
+<value>${shop_btn}</value>
+<iter>
+<var name="${element}">(//li/a[contains(text(), 'Home')])[1]</var>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230506 14:09:21.902" endtime="20230506 14:09:21.937"/>
+</kw>
+<status status="PASS" starttime="20230506 14:09:21.902" endtime="20230506 14:09:21.937"/>
+</iter>
+<iter>
+<var name="${element}">(//li/a[contains(text(), 'My account')])[1]</var>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230506 14:09:21.938" endtime="20230506 14:09:21.964"/>
+</kw>
+<status status="PASS" starttime="20230506 14:09:21.937" endtime="20230506 14:09:21.964"/>
+</iter>
+<iter>
+<var name="${element}">(//li/a[contains(text(), 'Shop')])[1]</var>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230506 14:09:21.964" endtime="20230506 14:09:21.983"/>
+</kw>
+<status status="PASS" starttime="20230506 14:09:21.964" endtime="20230506 14:09:21.983"/>
+</iter>
+<status status="PASS" starttime="20230506 14:09:21.901" endtime="20230506 14:09:21.983"/>
+</for>
+<status status="PASS" starttime="20230506 14:09:21.901" endtime="20230506 14:09:21.983"/>
+</kw>
+<kw name="Click On Element" library="General">
+<arg>${shop_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230506 14:09:21.983" endtime="20230506 14:09:22.001"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230506 14:09:22.002" level="INFO">Clicking element '(//li/a[contains(text(), 'Shop')])[1]'.</msg>
+<status status="PASS" starttime="20230506 14:09:22.001" endtime="20230506 14:09:23.174"/>
+</kw>
+<status status="PASS" starttime="20230506 14:09:21.983" endtime="20230506 14:09:23.175"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Step 3 Validate Shop page elements</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230506 14:09:23.176" level="INFO">Step 3 Validate Shop page elements</msg>
+<status status="PASS" starttime="20230506 14:09:23.175" endtime="20230506 14:09:23.176"/>
+</kw>
+<kw name="Verify Shop page is loaded" library="Shop">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${shop_page_header}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230506 14:09:23.177" endtime="20230506 14:09:23.207"/>
+</kw>
+<status status="PASS" starttime="20230506 14:09:23.176" endtime="20230506 14:09:23.207"/>
+</kw>
+<kw name="Stop Test" library="General" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 14:09:24.219" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230506 14:09:23.208" endtime="20230506 14:09:24.219"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230506 14:09:24.219" endtime="20230506 14:09:26.350"/>
+</kw>
+<status status="PASS" starttime="20230506 14:09:23.208" endtime="20230506 14:09:26.350"/>
+</kw>
+<tag>Functional</tag>
+<tag>Shop</tag>
+<status status="PASS" starttime="20230506 14:09:18.523" endtime="20230506 14:09:26.350"/>
+</test>
+<doc>Shop test cases</doc>
+<status status="PASS" starttime="20230506 14:09:18.316" endtime="20230506 14:09:26.353"/>
+</suite>
+<status status="PASS" starttime="20230506 14:09:18.304" endtime="20230506 14:09:26.355"/>
+</suite>
+<status status="PASS" starttime="20230506 14:09:18.288" endtime="20230506 14:09:26.356"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Functional</stat>
+<stat pass="1" fail="0" skip="0">Shop</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cases">Cases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Shop">Cases.Shop</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Shop">Cases.Shop.Shop</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230506 14:09:18.513" level="WARN">Imported resource file 'D:\project-purple\robot-autotester\resources\home\HomeLocators.robot' is empty.</msg>
+</errors>
+</robot>
