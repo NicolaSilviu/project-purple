@@ -1,0 +1,7 @@
+Category,Name,Attribute Name,Attribute Values,Attribute is Visible,Attribute is Variation,Attribute is Taxonomy,Price (euros),,,Weight (kg),Length (mm),Width (mm),Height (mm)
+BMW,M8,Model,M8,1,0,0,148300,,,1960,4867,1907,1344
+,,Horsepower (hp),625,1,0,0,,,,,,,
+,,0-100 km/h Time (seconds),3.2,,,,,,,,,,
+BMW,M4,Model,M4,1,,,85100,,,1650,4794,1887,1393
+,,Horsepower (hp),473,1,0,0,,,,,,,
+,,0-100 km/h Time (seconds),4.2,,,,,,,,,,
