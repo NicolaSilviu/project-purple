@@ -19,3 +19,4 @@ Test Teardown    General.Stop Test
 
     Log  Step 2 Validate Shop page elements
     Shop.Verify Shop page is loaded
+    
